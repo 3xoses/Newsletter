@@ -1,0 +1,168 @@
+body, html {
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    position: absolute;
+    padding: 1em;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 2em);
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    
+}
+
+header nav ul li a {
+    padding: 1em;
+}
+
+.logo img {
+    width: 150px;
+    height: 70px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.wrapper section {
+    padding: 3em;
+}
+
+.wrapper h1, h2, .read-btn {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.wrapper h2 {
+    font-size: 1.4rem;
+}
+
+.wrapper .read-btn {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/arrow.svg') no-repeat;
+    background-size: 8px;
+    background-position: 0 1px;
+    padding-left: 1em;
+}
+
+.wrapper .primary {
+    padding: 1.5em 1.5em 1.5em calc(3em + 25px);
+    background-position: 3em;
+    border: 1px solid white;
+    margin-top: 3em;
+    margin-left: -3em;
+    display: inline-block;
+}
+
+.hero {
+    padding-top: 8em;
+    background: url(src/terminal_bg_header.png);
+    background-size: cover;
+}
+
+.hero p {
+    width: 70%;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+}
+
+.hero h4 {
+    line-height: 1.4rem;
+}
+
+.sidebar, .subscribe {
+    font-size: .9rem;
+    line-height: 1.6rem;
+}
+
+.sidebar {
+    background: rgb(255, 223, 0);
+}
+
+.sidebar .read-btn {
+    margin-top: 2em;
+    display: block;
+    background-position: 0 .3em;
+}
+
+.subscribe input {
+    width: 100%;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subscribe button {
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 1em;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    header {
+        background: none;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 70% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas:
+        "hero featured"
+        "hero subsribe";
+        height: 100vh;
+    }
+    .hero {
+        grid-area: hero;
+    }
+
+    section {
+        display: grid;
+        grid-template-rows: auto;
+        align-items: center;
+    }
+    
+}
+@media only screen and (min-width: 1800px) {
+    html {
+        font-size: 21px;
+    }
+}
